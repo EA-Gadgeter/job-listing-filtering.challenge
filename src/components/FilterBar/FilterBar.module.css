@@ -1,0 +1,74 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 1rem 1.5rem -1rem rgba(90, 164, 164, 0.2);
+  gap: 2rem;
+
+  /* 
+    Overlap header
+  */
+  margin: 0 auto;
+  transform: translateY(-30%);
+  width: 100%;
+}
+
+.filterList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.filterItem {
+  display: flex;
+  align-items: center;
+  border-radius: 0.4rem;
+  overflow: hidden;
+}
+
+.filterName {
+  background-color: var(--green-50);
+  color: var(--green-400);
+  font-weight: 700;
+  font-size: 1.3rem;
+  padding: 0.5rem 0.8rem;
+  /* To visually match the button height */
+  display: flex;
+  align-items: center;
+}
+
+.removeButton {
+  background-color: var(--green-400);
+  border: none;
+  padding: 0 0.8rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+  height: 100%; /* Matches the span container so the icon area stretches properly */
+}
+
+.removeButton:hover {
+  background-color: var(--green-900);
+}
+
+.clearButton {
+  background: none;
+  border: none;
+  color: var(--gray-400);
+  font-weight: 700;
+  font-family: inherit;
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.clearButton:hover {
+  color: var(--green-400);
+  text-decoration: underline;
+}
