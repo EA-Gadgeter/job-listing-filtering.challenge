@@ -71,6 +71,11 @@
   color: var(--green-900);
   font-size: 1.5rem;
   cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.position:hover {
+  color: var(--green-400);
 }
 
 .details {
@@ -106,4 +111,53 @@
   border-radius: 0.4rem;
   cursor: pointer;
   transition: all 0.3s ease;
+}
+
+.tagButton:hover {
+  background-color: var(--green-400);
+  color: white;
+}
+
+@media (min-width: 1440px) {
+  .card {
+    padding: 3rem 4rem;
+  }
+
+  .jobArticle {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .mainInfoWrapper {
+    display: flex;
+    align-items: center;
+    gap: 2.4rem;
+  }
+
+  .logoContainer {
+    /* Logo is no longer absolute */
+    position: static;
+  }
+
+  .logoContainer .logo {
+    width: 8.8rem; /* Bigger logo in desktop */
+    height: 8.8rem;
+  }
+
+  .position {
+    font-size: 1.8rem;
+  }
+
+  .details {
+    font-size: 1.5rem;
+  }
+
+  .divider {
+    display: none;
+  }
+
+  .tagsContainer {
+    justify-content: flex-end;
+  }
 }

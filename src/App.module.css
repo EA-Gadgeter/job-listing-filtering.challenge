@@ -21,3 +21,16 @@
     gap: 4.75rem 3rem;
   }
 }
+
+@media (min-width: 1440px) {
+  .mainContainer {
+    max-width: 1109px;
+  }
+  
+  .jobList {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    margin-top: 4rem;
+  }
+}

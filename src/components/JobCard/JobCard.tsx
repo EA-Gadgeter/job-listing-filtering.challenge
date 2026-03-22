@@ -16,22 +16,24 @@ export const JobCard = ({ job, onAddFilter }: JobCardProps) => {
   return (
     <li className={`${styles.card} ${job.featured ? styles.cardFeatured : ''}`}>
       <article className={styles.jobArticle}>
-        <figure className={styles.logoContainer}>
-          <img src={logoUrl} alt={`${job.company} Logo`} className={styles.logo} />
-        </figure>
+        <div className={styles.mainInfoWrapper}>
+          <figure className={styles.logoContainer}>
+            <img src={logoUrl} alt={`${job.company} Logo`} className={styles.logo} />
+          </figure>
 
-        <div className={styles.infoContainer}>
-          <div className={styles.companyRow}>
-            <span className={styles.companyName}>{job.company}</span>
-            {job.new && <span className={styles.badgeNew}>NEW!</span>}
-            {job.featured && <span className={styles.badgeFeatured}>FEATURED</span>}
+          <div className={styles.infoContainer}>
+            <div className={styles.companyRow}>
+              <span className={styles.companyName}>{job.company}</span>
+              {job.new && <span className={styles.badgeNew}>NEW!</span>}
+              {job.featured && <span className={styles.badgeFeatured}>FEATURED</span>}
+            </div>
+
+            <h2 className={styles.position}>{job.position}</h2>
+
+            <p className={styles.details}>
+              {job.postedAt} <span>&bull;</span> {job.contract} <span>&bull;</span> {job.location}
+            </p>
           </div>
-
-          <h2 className={styles.position}>{job.position}</h2>
-
-          <p className={styles.details}>
-            {job.postedAt} <span>&bull;</span> {job.contract} <span>&bull;</span> {job.location}
-          </p>
         </div>
 
         <hr className={styles.divider} />

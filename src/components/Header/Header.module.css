@@ -1,8 +1,7 @@
 .header {
   background-color: var(--green-400);
-  /* Posicionamiento para que la imagen de fondo y la posible FilterBar encajen bien */
   position: relative;
-  height: 15.6rem; /* Altura estándar aproximada del header mobile del diseño (156px) */
+  height: 15.6rem;
 }
 
 .bg_image {

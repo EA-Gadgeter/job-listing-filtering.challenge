@@ -4,7 +4,6 @@ import type { Job } from '../types/job';
 export function useJobFilters(initialJobs: Job[]) {
   const [activeFilters, setActiveFilters] = useState<string[]>([]);
 
-  // Función para agregar un filtro
   const addFilter = (filter: string) => {
     setActiveFilters((prev) => {
       if (prev.includes(filter)) return prev;
@@ -12,17 +11,14 @@ export function useJobFilters(initialJobs: Job[]) {
     });
   };
 
-  // Función para eliminar un filtro
   const removeFilter = (filter: string) => {
     setActiveFilters((prev) => prev.filter((f) => f !== filter));
   };
 
-  // Función para limpiar todos los filtros
   const clearFilters = () => {
     setActiveFilters([]);
   };
 
-  // Lista de trabajos filtrada
   const filteredJobs = useMemo(() => {
     if (activeFilters.length === 0) {
       return initialJobs;
@@ -30,13 +26,13 @@ export function useJobFilters(initialJobs: Job[]) {
     
     // Implementar la lógica para cruzar `role`, `level`, `languages` y `tools`
     return initialJobs.filter((job) => {
-      // Extraemos todas las etiquetas asignadas la vacante
+      // We extract all the tags that can be used for filtering from the job posting
       const jobTags = [job.role, job.level, ...job.languages, ...job.tools];
       
-      // Creamos un Set temporal de las etiquetas del job para búsquedas rápidas (O(1))
+      // Temporal Set for O(1) lookups when checking if a job contains all active filters
       const tagSet = new Set(jobTags);
       
-      // La vacante debe poseer TODOS los filtros que hayamos seleccionado activamente
+      // We check if every active filter is present in the job's tags
       return activeFilters.every((filter) => tagSet.has(filter));
     });
   }, [initialJobs, activeFilters]);

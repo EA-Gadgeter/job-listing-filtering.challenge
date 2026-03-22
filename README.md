@@ -1,75 +1,72 @@
-# React + TypeScript + Vite
+# Frontend Mentor - Job listings with filtering solution
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a solution to the [Job listings with filtering challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/job-listings-with-filtering-ivstIPCt). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
-Currently, two official plugins are available:
+## Table of contents
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [AI Collaboration](#ai-collaboration)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
 
-## React Compiler
+## Overview
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+### The challenge
 
-Note: This will impact Vite dev & build performances.
+Users should be able to:
 
-## Expanding the ESLint configuration
+- View the optimal layout for the site depending on their device's screen size
+- See hover states for all interactive elements on the page
+- Filter job listings based on the categories
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Links
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## My process
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### Built with
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- CSS Modules
+- Flexbox
+- CSS Grid
+- Mobile-first workflow
+- [React](https://reactjs.org/) - JS library
+- AI (Github Copilot Student Plan, using Agent and Plan mode)
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### What I learned
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Ever since AI has been used for programming, I’ve never really got round to using it for anything other than autocomplete or specific queries about how to do something. This is the first time I’ve limited my involvement to simply letting the AI generate all the code, stepping in only to resolve specific errors.
+
+### Continued development
+
+To be honest, this wasn’t a particularly difficult challenge, but it would have taken me a few hours to complete it, especially if I wanted to polish it as much as possible.
+With AI, the development time was drastically reduced – probably to less than an hour and a half.
+
+I’m keen to take on more AI challenges, particularly more complex ones, in order to better understand the limits that AI might have.
+
+
+### AI Collaboration
+
+Even without using state-of-the-art AI models or services (I mainly used Gemini 3.1 Preview), the results really surprised me; the AI was even able to correctly interpret screenshots of the designs in Figma.
+
+I’d also like to thank and congratulate the Frontend Mentor team; their AGENTS.md file is very comprehensive and really helped me achieve better results. 
+
+The file helped the AI to not not limit  to only generate code at a rapid pace and without much thought. It would pause to offer me different solutions it had come up with, to ask if I already had an idea of how I wanted to do it, if I already had an HTML skeleton for the component to be created, or even to warn me about any problems or drawbacks with a solution I might have come up with.
+
+## Author
+
+- Website - [Emiliano Acevedo](https://ea-gadgeter.github.io/Web-Portafolio/) **VERY outdated, have learned a lot more since I made this portfolio**
+- Frontend Mentor - [@EA-Gadgeter](https://www.frontendmentor.io/profile/EA-Gadgeter)
+- LinkedIn - [Emiliano Acevedo](https://www.linkedin.com/in/ariel-emiliano-acevedo-posos-72044a247/?locale=en_US)
+
+## Acknowledgments
+
+Thanks to AI, which has shown tremendous improvement in recent years, and because it basically carried out almost the entire project on its own.
