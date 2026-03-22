@@ -8,5 +8,7 @@ export default defineConfig({
     react(),
     babel({ presets: [reactCompilerPreset()] }),
   ],
-  base: "/job-listing-filtering-challenge/"
+  base: "/job-listing-filtering-challenge/",
+  
+  assetsInclude: ['**/*.svg']
 })

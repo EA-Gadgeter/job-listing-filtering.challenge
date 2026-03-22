@@ -10,8 +10,8 @@ export const FilterBar = ({ filters, onRemove, onClear }: FilterBarProps) => {
   // If there are no active filters, we don't render the component
   if (filters.length === 0) return null;
 
-  // Let's resolve the remove icon path dynamically like we did for the JobCards
-  const removeIconUrl = new URL('../../assets/images/icon-remove.svg', import.meta.url).href;
+  // Since we moved images to public/, we resolve using BASE_URL
+  const removeIconUrl = `${import.meta.env.BASE_URL}images/icon-remove.svg`;
 
   return (
     <div className={styles.container}>

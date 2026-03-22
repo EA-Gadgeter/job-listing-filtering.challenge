@@ -10,8 +10,10 @@ export const JobCard = ({ job, onAddFilter }: JobCardProps) => {
   // Mergin all tags that user can click to filter
   const tags = [job.role, job.level, ...job.languages, ...job.tools];
 
-  // We resolve the logo URL dynamically using Vite's import.meta.url to ensure it works in both development and production builds
-  const logoUrl = new URL(`../../assets${job.logo}`, import.meta.url).href;
+  // We resolve the logo URL using Vite's BASE_URL to point to the public folder
+  // job.logo is something like "/images/photosnap.svg", so we remove the first slash
+  // to avoid duplicating it if BASE_URL already enforces roots.
+  const logoUrl = `${import.meta.env.BASE_URL}${job.logo.substring(1)}`;
 
   return (
     <li className={`${styles.card} ${job.featured ? styles.cardFeatured : ''}`}>
